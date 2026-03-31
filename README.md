@@ -23,6 +23,8 @@ These skills are extracted from the [CRE Acquisition Orchestrator](https://githu
 
 > **No API keys. No installation. No dependencies.** Each `.md` file works on its own.
 
+> **Disclaimer:** These skill files are educational and informational resources, not production software for making investment decisions. The financial calculations, legal checklists, underwriting models, and analysis outputs are for reference and learning purposes only. Nothing in this repository constitutes financial, legal, investment, or tax advice. The authors and contributors are not liable for any decisions made based on information produced using these skills. Always consult qualified professionals — licensed attorneys, CPAs, commercial real estate brokers, and financial advisors — before making real estate investment decisions. These materials are provided "as is" without warranty of any kind. See [LICENSE](LICENSE) for full terms.
+
 ---
 
 ## Table of Contents
