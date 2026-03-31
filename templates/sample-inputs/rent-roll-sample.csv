@@ -1,0 +1,11 @@
+unit,tenant_name,unit_type,sqft,lease_start,lease_end,monthly_rent,deposit,status,notes
+101,Johnson Sarah,1BR/1BA,720,2025-03-01,2026-02-28,1225,1225,occupied,
+102,Williams Mike,1BR/1BA,720,2025-06-15,2026-06-14,1250,1250,occupied,
+103,Garcia Maria,2BR/2BA,1050,2024-11-01,2025-10-31,1500,1500,occupied,
+104,,Studio,480,,,0,0,vacant,Vacant 45 days
+105,Chen David,2BR/2BA,1050,2025-01-01,2026-12-31,1475,1475,occupied,Below market
+106,Brown Ashley,1BR/1BA,720,2025-08-01,2026-07-31,1275,1275,occupied,
+107,Davis Robert,3BR/2BA,1350,2025-02-01,2026-01-31,1825,1825,occupied,
+108,,1BR/1BA,720,,,0,0,vacant,Down for renovation
+109,Martinez Ana,Studio,480,2025-04-01,2026-03-31,1025,1025,occupied,
+110,Taylor James,2BR/2BA,1050,2025-07-01,2026-06-30,1550,1550,occupied,
