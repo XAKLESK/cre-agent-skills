@@ -9,8 +9,8 @@ Thank you for your interest in improving these skills. Contributions are welcome
 If you find a formula that's wrong, a threshold that's outdated, or a step that could be clearer:
 
 1. Fork this repo
-2. Make your changes to the skill file in `skills/`
-3. If the same skill exists in `claude-code-plugins/`, update the copy there too
+2. Make your changes to the root file in `skills/` or `knowledge/`
+3. If the same file exists in `claude-code-plugins/`, update the mirrored copy there in the same change
 4. Submit a pull request with a clear description of what changed and why
 
 ### Adding New Skills
@@ -20,8 +20,23 @@ If you want to add a new CRE analysis skill:
 1. Follow the template structure used by existing skills (see any file in `skills/` for the pattern)
 2. Include all required sections: When to Use, What You'll Need, Mission, Strategy, Output Format, Quality Checks, When Data is Missing, Confidence Scoring, Related Knowledge Bases
 3. Place it in the appropriate department directory under `skills/`
-4. Add it to the relevant Claude Code plugin in `claude-code-plugins/`
-5. Update README.md and docs/SKILL-INDEX.md
+4. Create a companion research note under `research/` that documents sources, assumptions, benchmark rationale, conflicting-source resolution, and edge cases
+5. Add it to the relevant Claude Code plugin in `claude-code-plugins/`
+6. Update README.md and docs/SKILL-INDEX.md
+
+### Research-Backed Authoring Standard
+
+New sector skills and knowledge bases must follow the standards in [docs/RESEARCH-STANDARDS.md](docs/RESEARCH-STANDARDS.md).
+
+Minimum requirements for new sector content:
+
+- One companion research note per new skill or knowledge base
+- At least 10 cited sources
+- At least 3 primary or quasi-primary sources where available
+- Publish dates and access dates for time-sensitive market or lending sources
+- Explicit geography and scope assumptions
+
+Use the root files under `skills/` and `knowledge/` as the authored source of truth. The plugin copies are distribution mirrors for Claude Code.
 
 ### Updating Knowledge Bases
 

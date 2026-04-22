@@ -1,12 +1,12 @@
 # Offering Memo Parser
 
-Extract property characteristics, deal terms, financial highlights, and seller information from a Offering Memorandum (OM), marketing brochure, or property flyer.
+Extract property characteristics, deal terms, financial highlights, and seller information from an Offering Memorandum (OM), marketing brochure, or property flyer.
 
 ---
 
 ## When to Use This Skill
 
-Use this skill when you have an offering memorandum, marketing package, or property flyer for a commercial real estate deal and need to extract structured data from it. It handles PDF marketing documents, PowerPoint decks, Word documents, and property flyers (images). Use it at the beginning of deal evaluation to get the key facts out of the OM before underwriting.
+Use this skill when you have an offering memorandum, marketing package, or property flyer for a commercial real estate deal and need to extract structured data from it. It handles PDF marketing documents, PowerPoint decks, Word documents, and property flyers (images). Use it at the beginning of deal evaluation to get the key facts out of the OM before underwriting across multifamily, industrial, and other CRE sectors.
 
 ---
 
@@ -68,7 +68,7 @@ Scan the document for standard OM section headers:
 ```json
 {
   "physical": {
-    "propertyType": "multifamily",
+    "propertyType": "multifamily | industrial | office | retail | mixed-use | unknown",
     "propertyClass": "B",
     "totalUnits": 200,
     "totalSqFt": 180000,

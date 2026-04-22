@@ -4,6 +4,39 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.0] - 2026-04-22
+
+### Added
+
+- Industrial v1 sector expansion with 8 new U.S.-focused industrial acquisition skills
+  - industrial market study
+  - industrial lease roster analysis
+  - industrial lease abstract review
+  - industrial tenant credit analysis
+  - industrial physical inspection
+  - industrial underwriting model builder
+  - industrial financing fit
+  - industrial IC memo writer
+- 3 industrial knowledge bases
+  - industrial benchmarks
+  - industrial lease structures
+  - industrial lender criteria
+- 11 industrial companion research notes under `research/industrial/`
+- New Claude Code plugin: `cre-industrial`
+- New documentation:
+  - `docs/RESEARCH-STANDARDS.md`
+  - `docs/ROADMAP.md`
+  - `docs/releases/industrial-v1.md`
+  - `docs/releases/industrial-v1-pr-summary.md`
+
+### Changed
+
+- Repositioned the repo as a broader U.S. CRE skill library spanning multifamily core, shared CRE workflows, and industrial v1
+- Updated `README.md`, `docs/HOW-TO-USE.md`, and `docs/SKILL-INDEX.md` to reflect the new sector structure
+- Updated `CONTRIBUTING.md` to require companion research notes for new sector content
+- Added PowerShell plugin installation examples alongside existing Claude Code usage guidance
+- Lightly broadened shared document-ingestion wording so intake workflows read cleanly for industrial and broader CRE use cases
+
 ## [1.0.0] - 2026-03-30
 
 ### Added

@@ -1,132 +1,138 @@
 # How to Use CRE Agent Skills
 
-This guide covers how to load these skill files into different AI platforms.
+This guide covers how to use the repo as a broader U.S. CRE skills library, including the existing multifamily core, shared CRE workflows, and the new Industrial v1 pack.
 
 ---
 
-## Claude (Anthropic)
+## Claude Code
 
-### Claude Projects (Recommended)
+### Install a Plugin in PowerShell
 
-1. Open [claude.ai](https://claude.ai) and create a new Project
-2. Click "Add knowledge" in the Project settings
-3. Upload the `.md` skill file(s) you want to use
-4. Optionally upload the recommended knowledge base files listed in the skill's "Related Knowledge Bases" section
-5. Start a conversation in the project — Claude will automatically reference the loaded skills
+```powershell
+git clone https://github.com/ahacker-1/cre-agent-skills.git
+Set-Location .\cre-agent-skills
 
-**Tip:** Name your project by deal or task (e.g., "Parkview Apartments DD") and load the relevant subset of skills for that workflow.
-
-### Claude Code (CLI)
-
-If you're using Claude Code, you can reference skill files directly:
-
-```bash
-# Load a skill as context
-claude "Using the skill in skills/due-diligence/rent-roll-analyst.md, analyze this rent roll: [data]"
+New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
+Copy-Item -Recurse .\claude-code-plugins\cre-industrial "$HOME\.claude\skills\"
 ```
 
-Or add frequently-used skills to your CLAUDE.md file for automatic loading.
+### Install a Plugin in Bash
+
+```bash
+git clone https://github.com/ahacker-1/cre-agent-skills.git
+cd cre-agent-skills
+
+mkdir -p ~/.claude/skills
+cp -r ./claude-code-plugins/cre-industrial ~/.claude/skills/
+```
+
+### Use a Plugin
+
+```text
+/cre-industrial Review the lease roster and underwriting risks for a 180,000 SF shallow-bay asset in Dallas
+```
+
+### Use a Skill File Directly
+
+Reference a root skill file in your prompt:
+
+```text
+Use the instructions in skills/industrial/industrial-market-study.md to evaluate this property.
+```
 
 ---
 
-## ChatGPT (OpenAI)
+## Claude Projects
+
+Upload:
+
+- one or more skill markdown files
+- the related knowledge base markdown file(s)
+- optionally, relevant research notes if you want the model to see the underlying source logic
+
+Recommended starting combinations:
+
+- Multifamily core: rent roll + OpEx + financial model + multifamily benchmarks
+- Industrial v1: industrial market study + lease roster + underwriting + industrial knowledge bases
+
+---
+
+## ChatGPT / Custom GPTs
 
 ### Custom GPT
 
-1. Go to [chat.openai.com](https://chat.openai.com) → Explore GPTs → Create
-2. In the "Instructions" field, paste the full content of the skill file
-3. For knowledge bases, upload them as files in the GPT's "Knowledge" section
-4. Save and use the GPT for that specific analysis task
+- Paste the skill content into the GPT instructions
+- Upload the related knowledge bases as files
+- Optionally upload research notes when you want source-traceable reasoning support
 
 ### Conversation-Level
 
-1. Start a new conversation
-2. Paste the skill content as your first message: "Use the following skill instructions for our conversation: [paste skill content]"
-3. Follow up with your analysis request and data
+- Paste the skill content as your first message
+- Then provide the deal data and ask for the specific analysis
 
 ---
 
-## Cursor / Windsurf / AI Code Editors
+## Cursor / Windsurf / Other Editors
 
-### As Rules Files
+Use the files in one of two ways:
 
-1. Copy the `.md` skill file into your project's rules directory (e.g., `.cursor/rules/` or `.windsurfrules/`)
-2. The AI assistant will automatically reference the skill when relevant
+- as rules or context files in your project
+- as reference markdown the assistant can read on demand
 
-### As Context Files
-
-1. Open the skill file in your editor
-2. Reference it in your prompt: "Following the instructions in rent-roll-analyst.md, analyze this data..."
+This works especially well when you want to combine a parser, a sector skill, and a knowledge base in one workflow.
 
 ---
 
-## Any LLM (API Usage)
+## Any LLM or API Workflow
 
-Include the skill content in your system prompt:
+Load the root skill file into the system prompt and append the related knowledge base.
 
-```python
-system_prompt = open("skills/due-diligence/rent-roll-analyst.md").read()
-
-response = client.messages.create(
-    model="claude-sonnet-4-20250514",
-    system=system_prompt,
-    messages=[
-        {"role": "user", "content": "Analyze this rent roll: [data]"}
-    ]
-)
-```
-
-For richer analysis, concatenate the skill with its recommended knowledge bases:
-
-```python
-skill = open("skills/due-diligence/rent-roll-analyst.md").read()
-knowledge = open("knowledge/multifamily-benchmarks.md").read()
-
-system_prompt = f"{skill}\n\n---\n\nReference Knowledge:\n{knowledge}"
-```
+For new industrial workflows, the research note can be added as a third context layer when you want the model to see the benchmark rationale behind the prompt defaults.
 
 ---
 
 ## Recommended Skill Combinations
 
-Different tasks benefit from loading multiple skills together. Here are common combinations:
+### Multifamily Acquisitions Core
 
-### Full Due Diligence Review
-Load all 7 due diligence skills + Risk Scoring Framework + Multifamily Benchmarks
+- `rent-roll-analyst`
+- `opex-analyst`
+- `financial-model-builder`
+- `scenario-analyst`
+- `ic-memo-writer`
 
-### Underwriting Package
-- Financial Model Builder + Scenario Analyst + IC Memo Writer
-- Knowledge: Underwriting Calculations + Multifamily Benchmarks
+### Shared CRE Deal Intake
 
-### Debt Sourcing
-- Lender Outreach + Quote Comparator + Term Sheet Builder
-- Knowledge: Lender Criteria + Underwriting Calculations
+- `document-classifier`
+- `financials-parser`
+- `offering-memo-parser`
 
-### Legal Review
-- PSA Reviewer + Title & Survey Reviewer + Estoppel Tracker
-- Knowledge: Legal Checklist
+### Industrial v1 Acquisitions Core
 
-### Document Processing
-- Document Classifier + Rent Roll Parser + Financials Parser + Offering Memo Parser
-- These work well as a pipeline: classify first, then parse each document type
+- `industrial-market-study`
+- `industrial-lease-roster-analyst`
+- `industrial-lease-abstract-reviewer`
+- `industrial-tenant-credit-analyst`
+- `industrial-physical-inspection`
+- `industrial-underwriting-model-builder`
+- `industrial-financing-fit`
+- `industrial-ic-memo-writer`
 
-### Quick Deal Screening
-- Rent Roll Analyst + OpEx Analyst + Financial Model Builder
-- Knowledge: Underwriting Calculations + Multifamily Benchmarks
-- Gets you to a preliminary NOI and cap rate assessment fast
+### Closing Readiness
+
+- `psa-reviewer`
+- `title-survey-reviewer`
+- `insurance-coordinator`
+- `loan-doc-reviewer`
+- `closing-coordinator`
+- `funds-flow-manager`
 
 ---
 
 ## Tips for Best Results
 
-1. **Provide structured data when possible.** CSV or tabular data produces better analysis than unstructured text.
-
-2. **Include the property address.** Many skills use web research to pull market comps, submarket data, and benchmarks. The more specific the location, the better.
-
-3. **Load knowledge bases for deeper analysis.** Skills work on their own, but pairing them with the recommended knowledge files gives the AI access to formulas, benchmarks, and criteria it can reference during analysis.
-
-4. **Trust the output format.** Each skill defines a structured output (JSON or Markdown). Let the AI follow that format — it makes results consistent and comparable across deals.
-
-5. **Review the confidence scoring.** Every skill rates its own confidence (HIGH/MEDIUM/LOW) and flags data gaps. Pay attention to these — they tell you where the analysis is weakest.
-
-6. **Iterate on data gaps.** If the skill flags missing data, provide additional information and re-run that section. The skills are designed to handle partial data gracefully.
+1. Provide the property subtype whenever possible.
+2. For industrial deals, include clear height, loading, trailer parking, office finish, and power if you have them.
+3. Keep lease data separate from market assumptions. The industrial skills work best when the current lease story and the market story are both visible.
+4. Use the knowledge bases for reusable context and the research notes when you want source-backed traceability.
+5. Treat time-sensitive rent, spread, and lender assumptions as directional. Validate current local market conditions before acting on them.

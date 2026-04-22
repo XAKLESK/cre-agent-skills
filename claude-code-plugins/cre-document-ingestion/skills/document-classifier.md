@@ -1,12 +1,12 @@
 # Document Classifier
 
-Identify, classify, and organize incoming CRE deal documents — determining what type each document is, extracting key data points from each, and surfacing any missing or conflicting information.
+Identify, classify, and organize incoming CRE deal documents - determining what type each document is, extracting key data points from each, and surfacing any missing or conflicting information.
 
 ---
 
 ## When to Use This Skill
 
-Use this skill at the start of a new deal when you have a collection of documents (rent rolls, financials, offering memos, PSAs, inspection reports, etc.) and need to understand what you have, what each document contains, and what is still missing. It is the first step before performing any underwriting, due diligence, or financial modeling — getting your documents organized and validated.
+Use this skill at the start of a new deal when you have a collection of documents (rent rolls, financials, offering memos, PSAs, inspection reports, lease materials, etc.) and need to understand what you have, what each document contains, and what is still missing. It is the first step before performing underwriting, due diligence, or financial modeling across multifamily, industrial, and other CRE workflows - getting your documents organized and validated.
 
 ---
 
@@ -21,7 +21,7 @@ Use this skill at the start of a new deal when you have a collection of document
 
 ## Mission
 
-Scan incoming documents, identify document types, extract relevant CRE deal data, validate completeness, and generate a structured summary of what data has been captured and what gaps remain — ready for use in underwriting and due diligence.
+Scan incoming documents, identify document types, extract relevant CRE deal data, validate completeness, and generate a structured summary of what data has been captured and what gaps remain - ready for use in underwriting and due diligence.
 
 ---
 
@@ -114,7 +114,7 @@ For each document, determine its type using filename patterns and content indica
     "state": "",
     "zip": "",
     "county": "",
-    "propertyType": "multifamily",
+    "propertyType": "multifamily | industrial | office | retail | mixed-use | unknown",
     "yearBuilt": 0,
     "totalUnits": 0,
     "totalSqFt": 0,

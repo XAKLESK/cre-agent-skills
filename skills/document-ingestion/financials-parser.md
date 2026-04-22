@@ -266,8 +266,8 @@ Locate section headers:
 Run these validation checks before finalizing:
 
 1. **Math check**: Revenue − Expenses = NOI (within 1% tolerance)
-2. **Expense ratio**: Should be 35–55% for multifamily; flag if outside this range
-3. **Management fee**: Typically 3–5% of EGI; flag if outside 2–8%
+2. **Expense ratio**: Use property-type context. For multifamily, 35–55% is a useful screening range; for other CRE property types, compare against sector-specific benchmarks instead of treating the multifamily range as universal
+3. **Management fee**: Compare against property type and lease structure. For management-intensive assets, 3–5% of EGI is common; for leaner industrial structures it may be lower
 4. **Taxes per unit**: Compare to property's known tax bill or market norms; large discrepancies may indicate the T12 is pre-reassessment
 5. **Per-unit metrics**: Flag any expense category that is more than 2× or less than 0.5× typical benchmarks
 6. **Below-the-line items excluded**: CapEx, debt service, and depreciation must not be included in operating expenses; identify and exclude if present
