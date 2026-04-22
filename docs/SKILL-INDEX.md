@@ -72,6 +72,19 @@ Find the right skill for your task. Each entry shows what the skill does, what i
 | [Industrial Financing Fit](../skills/industrial/industrial-financing-fit.md) | Identify likely lender categories and financing structures | WALT, tenant quality, property profile, leverage target | Industrial Lender Criteria |
 | [Industrial IC Memo Writer](../skills/industrial/industrial-ic-memo-writer.md) | Synthesize industrial diligence into a decision memo | Market, lease, physical, underwriting, and financing outputs | Industrial Benchmarks, Industrial Lease Structures, Industrial Lender Criteria |
 
+## Brokerage Investment Sales v1
+
+| Skill | Use When You Need To... | Key Inputs | Pair With |
+|-------|------------------------|------------|-----------|
+| [Assignment Intake Manager](../skills/brokerage/assignment-intake-manager.md) | Start a seller-side assignment and organize authority, seller goals, and missing data | Property summary, seller objectives, document inventory | Brokerage Investment Sales Process |
+| [Broker Opinion of Value Builder](../skills/brokerage/broker-opinion-of-value-builder.md) | Build a broker pricing opinion for a listing | Property facts, comps, financial or lease support, market context | Broker Opinion of Value Guidance |
+| [Listing Proposal Builder](../skills/brokerage/listing-proposal-builder.md) | Draft a seller-facing listing proposal and process plan | Pricing stance, process recommendation, seller objectives | Brokerage Investment Sales Process, Broker Opinion of Value Guidance |
+| [Offering Memorandum and Teaser Writer](../skills/brokerage/offering-memorandum-and-teaser-writer.md) | Draft teaser and OM / CIM structure for a live listing | Property story, process style, confidentiality preferences | Marketing Confidentiality and Buyer Process |
+| [Buyer Process and Data Room Manager](../skills/brokerage/buyer-process-and-data-room-manager.md) | Control buyer registration, qualification, tours, and data-room access | Buyer process rules, available materials, seller restrictions | Marketing Confidentiality and Buyer Process |
+| [Call for Offers and Bid Leveling Analyst](../skills/brokerage/call-for-offers-and-bid-leveling-analyst.md) | Compare bids and recommend leveling, BAFO, or backup strategy | LOIs, price, deposit, timing, buyer credibility | Offer Negotiation and Closing Playbook |
+| [Deal Term Negotiation Brief Builder](../skills/brokerage/deal-term-negotiation-brief-builder.md) | Build a seller-side negotiation brief for business terms | LOI or offer terms, seller priorities, open issues | Offer Negotiation and Closing Playbook |
+| [PSA to Close Transaction Coordinator](../skills/brokerage/psa-to-close-transaction-coordinator.md) | Coordinate seller-side execution from signed deal to close | Executed terms, dates, diligence workstreams, open issues | Brokerage Investment Sales Process, Offer Negotiation and Closing Playbook |
+
 ---
 
 ## Common Workflows
@@ -117,3 +130,13 @@ Find the right skill for your task. Each entry shows what the skill does, what i
 7. **Industrial Underwriting Model Builder** → build the lease-driven base case
 8. **Industrial Financing Fit** → identify likely lender lanes
 9. **Industrial IC Memo Writer** → summarize the investment case
+
+### "I need a seller-side investment sales workflow"
+1. **Assignment Intake Manager** → organize seller goals, authority, and missing data
+2. **Broker Opinion of Value Builder** → build the pricing recommendation
+3. **Listing Proposal Builder** → package the process and pitch
+4. **Offering Memorandum and Teaser Writer** → build buyer-facing marketing materials
+5. **Buyer Process and Data Room Manager** → control buyer access, tours, and Q&A
+6. **Call for Offers and Bid Leveling Analyst** → compare bids and guide BAFO
+7. **Deal Term Negotiation Brief Builder** → frame the negotiation posture
+8. **PSA to Close Transaction Coordinator** → track the deal through closing

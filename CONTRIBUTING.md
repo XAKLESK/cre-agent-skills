@@ -28,6 +28,11 @@ If you want to add a new CRE analysis skill:
 
 New sector skills and knowledge bases must follow the standards in [docs/RESEARCH-STANDARDS.md](docs/RESEARCH-STANDARDS.md).
 
+This applies to both:
+
+- property-type packs, such as industrial
+- role-based packs, such as brokerage
+
 Minimum requirements for new sector content:
 
 - One companion research note per new skill or knowledge base

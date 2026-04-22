@@ -4,6 +4,36 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.2.0] - 2026-04-22
+
+### Added
+
+- Brokerage Investment Sales v1 release with 8 new U.S.-focused seller-side brokerage skills
+  - assignment intake manager
+  - broker opinion of value builder
+  - listing proposal builder
+  - offering memorandum and teaser writer
+  - buyer process and data room manager
+  - call for offers and bid leveling analyst
+  - deal term negotiation brief builder
+  - PSA to close transaction coordinator
+- 4 brokerage knowledge bases
+  - brokerage investment sales process
+  - broker opinion of value guidance
+  - marketing confidentiality and buyer process
+  - offer negotiation and closing playbook
+- 12 brokerage companion research notes under `research/brokerage/`
+- New Claude Code plugin: `cre-brokerage`
+- New documentation:
+  - `docs/releases/brokerage-v1.md`
+  - `docs/releases/brokerage-v1-pr-summary.md`
+
+### Changed
+
+- Updated the public docs to position Brokerage Investment Sales v1 as an additive `v1.2.0` release on top of the original multifamily-first repo and the prior Industrial v1 release
+- Extended usage and skill-index docs with role-based brokerage workflows
+- Updated contributing guidance so role-based packs follow the same research-backed standard as sector packs
+
 ## [1.1.0] - 2026-04-22
 
 ### Added

@@ -29,10 +29,11 @@ Or add frequently-used skills to your CLAUDE.md file for automatic loading.
 
 ### Claude Code Plugins
 
-The repo still works well with individual skill files, and Claude Code now has an additional packaged option for the new Industrial v1 release:
+The repo still works well with individual skill files, and Claude Code now has additional packaged options on top of the original multifamily department plugins:
 
 - original multifamily department plugins
 - plus the new `/cre-industrial` plugin added in v1.1.0
+- plus the new `/cre-brokerage` plugin added in v1.2.0
 
 PowerShell example for the new Industrial v1 plugin:
 
@@ -54,6 +55,16 @@ cp -r ./claude-code-plugins/cre-industrial ~/.claude/skills/
 ```
 
 The original multifamily department plugins remain available exactly as before.
+
+Brokerage v1 install example:
+
+```powershell
+git clone https://github.com/ahacker-1/cre-agent-skills.git
+Set-Location .\cre-agent-skills
+
+New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
+Copy-Item -Recurse .\claude-code-plugins\cre-brokerage "$HOME\.claude\skills\"
+```
 
 ---
 
@@ -143,6 +154,11 @@ Load all 7 due diligence skills + Risk Scoring Framework + Multifamily Benchmark
 - Knowledge: Industrial Benchmarks + Industrial Lease Structures + Industrial Lender Criteria
 - Research: use `research/industrial/` when you want the model to see the source-backed benchmark rationale behind the new industrial defaults
 
+### Brokerage Investment Sales v1
+- Assignment Intake Manager + Broker Opinion of Value Builder + Listing Proposal Builder + Offering Memorandum and Teaser Writer + Buyer Process and Data Room Manager + Call for Offers and Bid Leveling Analyst + Deal Term Negotiation Brief Builder + PSA to Close Transaction Coordinator
+- Knowledge: Brokerage Investment Sales Process + Broker Opinion of Value Guidance + Marketing Confidentiality and Buyer Process + Offer Negotiation and Closing Playbook
+- Research: use `research/brokerage/` when you want the model to see the source-backed brokerage process and valuation guidance behind the new pack
+
 ### Quick Deal Screening
 - Rent Roll Analyst + OpEx Analyst + Financial Model Builder
 - Knowledge: Underwriting Calculations + Multifamily Benchmarks
@@ -167,3 +183,5 @@ Load all 7 due diligence skills + Risk Scoring Framework + Multifamily Benchmark
 7. **For Industrial v1, pass building specs whenever you can.** Clear height, dock count, truck court depth, trailer parking, office finish, and power materially affect the quality of the output.
 
 8. **Treat research-backed benchmarks as directional, not universal.** The industrial research notes improve traceability, but local market conditions should still control real decisions.
+
+9. **For Brokerage v1, separate business terms from legal terms.** The brokerage pack is designed for seller-side process control and negotiation support, not for replacing counsel.
